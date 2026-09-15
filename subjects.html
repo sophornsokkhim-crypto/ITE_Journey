@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subjects — ITE Journey</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: "#050B18", 900: "#0B1730", 800: "#102244", 700: "#16305C", 600: "#1D3E75" },
+            accent: { 400: "#4FD8C4", 500: "#2BBFAA" },
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-slate-50 font-body text-slate-800">
+
+  <!-- ================= NAVBAR ("Subjects" active) ================= -->
+  <header class="sticky top-0 z-50 border-b border-navy-800 bg-navy-950/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <!-- Logo / site name -->
+      <a href="index.html" class="flex items-center gap-2">
+      <span class="flex h-9 w-9 items-center justify-center rounded-md overflow-hidden">
+      <img src="images/ite_logo.png" alt="ITE Journey Logo" class="h-full w-full object-contain">
+      </span>
+
+      <span class="text-lg font-semibold text-white" style="font-family: 'Times New Roman', Times, serif;">ITE Journey</span>
+      </a>
+   
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="index.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Home</a>
+        <a href="about.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">About ITE </a>
+        <a href="journey.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">My Journey</a>
+        <a href="subjects.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Subjects</a>
+        <a href="skills.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Skills</a>
+        <a href="projects.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Projects</a>
+        <a href="resources.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Resources</a>
+      
+      </div>
+      <a href="advice.html" class="hidden rounded-md bg-accent-500 px-4 py-2 text-sm font-semibold text-navy-950 transition hover:bg-accent-400 md:inline-block">Advice</a>
+      <button id="menu-btn" class="text-white md:hidden" aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden space-y-1 border-t border-navy-800 bg-navy-950 px-6 py-4 md:hidden">
+      <a href="index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Home</a>
+      <a href="about.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">About ITE</a>
+      <a href="journey.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">My Journey</a>
+      <a href="subjects.html" class="block rounded-md px-3 py-2 text-sm font-medium text-accent-400">Subjects</a>
+      <a href="skills.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Skills</a>
+      <a href="projects.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Projects</a>
+      <a href="resources.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Resources</a>
+      <a href="advice.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Advice</a>
+    </div>
+  </header>
+
+  <main>
+        <!-- ================= MY JOURNEY HERO ================= -->
+<section class="relative overflow-hidden bg-navy-950">
+
+  <!-- LEFT PHOTO -->
+  <div
+    class="absolute inset-y-0 left-0 w-1/2 bg-cover bg-center"
+    style="background-image: url('images/pic.jpg');">
+  </div>
+
+  <!-- RIGHT PHOTO -->
+  <div
+    class="absolute inset-y-0 right-0 w-1/2 bg-cover bg-center"
+    style="background-image: url('images/pic2.jpg');">
+  </div>
+
+  <!-- DARK OVERLAY -->
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- TEXT -->
+  <div class="relative z-10 mx-auto flex min-h-[430px] max-w-6xl items-center px-6">
+
+    <div class="max-w-2xl">
+
+      <p class="font-heading text-sm font-semibold text-accent-400">
+        Course by course
+      </p>
+
+      <h1 class="mt-3 font-heading text-7xl font-semibold text-white sm:text-5xl" style="font-family: 'Times New Roman', Times, serif;">
+        Subjects
+      </h1>
+
+      <p class="mt-4 leading-relaxed text-white/80">
+        Click any subject to open it, and write a short note about what you actually learned or found difficult in it.
+        
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+    <section class="bg-black-50 py-16">
+      <div class="mx-auto max-w-4xl px-6 space-y-14">
+
+        <!--
+          Each subject below uses the native HTML <details>/<summary> tags.
+          This gives us a working "click to expand" accordion with ZERO
+          JavaScript — the browser handles the open/close behavior for us.
+          Just replace the placeholder sentence inside each <p> with your
+          own notes on what you learned in that subject.
+        -->
+
+        <!-- ===== Category: Programming & Software ===== -->
+        <div>
+          <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl font-semibold text-yellow-800 " style="font-family: 'Times New Roman', Times, serif;">Programming &amp; Software</h2>
+          <div class="mt-6 divide-y divide-slate-200 rounded-xl border border-slate-200">
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: Georgia;">
+                Basic Programming Language
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">
+                Learn about programming languages like concept of those languages, Syntax, Variable, Datatype, Function, Loop, Class, Object, and more about basic.
+              </p>
+              <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://www.geeksforgeeks.org/blogs/basics-of-computer-programming-for-beginners/" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                Advanced Programming Language (Java)
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">
+                 Learn about Java programming language how to create class, syntax, how to make each classes have relationship with each other, and also using this language to solve real world problem like making Library Management System.  
+              </p>
+              <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://www.hhrc.ac.in/ePortal/Computer%20Science%20&%20Applications/IMSC_18PCS2_ADV_JAVA_RAVIS.pdf" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                Advanced Programming Language II
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">
+                Going deepper with Java programming language learn about MVC, UI, Springboot, and also making Calculator by applying all of them too to know deeply the concept UI and Springboot.
+              </p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://www.geeksforgeeks.org/advance-java/advanced-java/" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                Object-Oriented Analysis &amp; Design
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">
+                OOAD learn about Class, Object, UML, Relationship use to connect from one class to other classes, Relationship between 2 classes, and more about Designing system. This course help us know the process before we build an useful system for client. This course tell us trying to understand the problem clearly before build the system by doing analysis. Espacially this course make us know deeply about OOP concept and how to design the system.
+              </p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://www.geeksforgeeks.org/software-engineering/object-oriented-analysis-and-design/" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Times New Roman', Times, serif;">
+                Data Structures &amp; Algorithms (I &amp; II)
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">
+                Data Structures & Algorithms (DSA) is about organizing data efficiently and solving problems step by step. Data structures help us store and manage data, while algorithms provide the steps needed to solve a problem. This course actually we can use more programming languages depend what we understand and know about OOP concept, but mostly we use C++ and Java.
+
+              </p>
+              <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+ 
+          </div>
+        </div>
+
+        <!-- ===== Category: Data & Systems ===== -->
+        <div>
+          <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl font-semibold text-green-700" style="font-family: 'Times New Roman', Times, serif;">Data &amp; Systems</h2>
+          <div class="mt-6 divide-y divide-slate-200 rounded-xl border border-slate-200">
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                Computer Fundamentals
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">Computer Fundamentals introduces the basic concepts of computers and information technology. It helps students understand computer hardware, software, operating systems, networks, and how computers process and store information.</p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://www.geeksforgeeks.org/computer-science-fundamentals/computer-fundamentals-tutorial/" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                Database I &amp; II
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">
+                Learn how data is organized, stored, and managed using databases. This course introduces database design, SQL, relationships, and data manipulation, and helping us understand how applications work with data.
+              </p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://www.geeksforgeeks.org/dbms/what-is-database/" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                Data Communications I &amp; II
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">
+                Data Communication is the study of how digital data is transmitted and exchanged between devices through communication networks. It covers network components, communication methods, protocols, transmission media, IP addressing, and how devices communicate efficiently and reliably.
+              </p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://www.netacad.com/?utm_source=chatgpt.com" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+
+  
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                WCT
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">Web and Computer Technology (WCT) introduces the fundamental technologies used to create, manage, and operate web-based and computer systems. It covers basic web technologies, computer tools, digital information, and the practical use of technology in modern computing.</p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development?utm_source=chatgpt.com" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+          </div>
+        </div>
+        <!-- ===== Category: Mathematics & Science ===== -->
+        <div>
+          <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl font-semibold text-blue-800" style="font-family:'Times New Roman', Times, serif;">Mathematics &amp; Science</h2>
+          <div class="mt-6 divide-y divide-slate-200 rounded-xl border border-slate-200">
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                Mathematics I &amp; II
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">Mathematics I & II provides the mathematical foundation needed for studying information technology and engineering. It covers mathematical concepts such as algebra, functions, equations, calculus, statistics, and problem-solving techniques that can be applied to technical and computing-related problems.</p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://ocw.mit.edu/search/?d=Mathematics" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                Probability &amp; Statistics
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">Probability & Statistics focuses on methods for collecting, organizing, analyzing, and interpreting data. It covers probability, statistical measures, data distributions, and techniques for making conclusions and decisions based on data.</p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://ocw.mit.edu/search/?d=Mathematics&d=Engineering%20Systems%20Division&q=Prbability%20and%20Statistic" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                Discrete Mathematics
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">Discrete Mathematics focuses on mathematical concepts used to represent and solve problems in computer science. It covers logic, sets, relations, functions, combinatorics, graphs, trees, and other structures used in computing and algorithm design. It is the basic of Cyber Security.</p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://ocw.mit.edu/search/?d=Mathematics&d=Engineering%20Systems%20Division&q=Discrete%20Math" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                Physics
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">Physics studies the fundamental principles that explain how matter, energy, forces, motion, and electricity interact. It provides a scientific foundation for understanding physical systems and their applications in engineering and technology.</p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://www.geeksforgeeks.org/physics/applications-of-physics-in-engineering/" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                Introduction to Electrical &amp; Electronic Engineering
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">Introduction to Electrical & Electronic Engineering provides fundamental knowledge of electricity, electrical circuits, and electronic systems. It introduces concepts such as voltage, current, resistance, circuit components, and basic electronic devices used in electrical and electronic systems.</p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://ocw.mit.edu/search/?d=Mathematics&d=Engineering%20Systems%20Division&d=Physics&q=Introduction%20to%20Electrical%20%26amp%3B%20Electronic%20Engineering" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                Technical Drawing
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">Technical Drawing introduces the principles and techniques used to create accurate drawings for engineering and technical purposes. It covers drawing standards, geometric shapes, measurements, projections, dimensions, and the visual representation of objects and designs.</p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://wiki.freecad.org/Basic_TechDraw_Tutorial" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- ===== Category: General Education ===== -->
+        <div>
+          <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl font-semibold text-red-600" style="font-family: 'Times New Roman', Times, serif;">General Education</h2>
+          <div class="mt-6 divide-y divide-slate-200 rounded-xl border border-slate-200">
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                English
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">English develops essential communication skills for academic, technical, and professional environments. It focuses on reading, writing, listening, speaking, grammar, vocabulary, and effective communication in everyday and IT-related contexts.</p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://www.scribd.com/document/970658133/General-English-for-Teachers-3-1" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;">
+                Critical Thinking &amp; Personal Development
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">Critical Thinking & Personal Development develops the ability to analyze information, evaluate ideas, solve problems, make informed decisions, and improve personal and professional skills. It also focuses on self-awareness, communication, teamwork, time management, and continuous personal growth.</p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://www.jamestaylor.me/exploring-the-elements-of-critical-thinking-for-personal-development/" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                Academic Skills
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">Academic Skills develops essential skills for successful study and learning. It covers academic reading and writing, research, information management, presentation, note-taking, time management, and effective communication in an academic environment.</p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://au.indeed.com/career-advice/career-development/academic-skills" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                Civilization &amp; History
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">Civilization & History introduces creative problem-solving and basic programming through Scratch. The course uses visual programming to create games, animations, and interactive projects while developing logical thinking, creativity, and computational skills.</p>
+                <!-- Recommended Resources -->
+                <div class="mt-5">
+                  <h4>Recommended Resources</h4>
+
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://scratch.mit.edu/" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                Philosophy &amp; Sociology
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">Philosophy & Sociology explores human thought, behavior, values, and society. The course introduces philosophical ideas and social concepts that help students understand different perspectives, analyze social issues, and develop critical thinking skills.</p>
+            
+            </details>
+
+            <details class="group p-5 open:bg-slate-50">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading font-semibold text-navy-950" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                Project Practicum
+                <span class="text-accent-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-500">
+                Project Practicum provides practical experience in applying knowledge and skills from information technology courses to real-world projects. It focuses on project planning, problem-solving, teamwork, programming, documentation, and developing a functional IT solution. This course normally no need to learn in class anymore it just let students practice coding, make the real web or sytem to solve real world problem by working with advisor that will help and check the work that we have done.
+              </p>
+            
+            </details>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="max-w-xl">
+          <p class="mt-3 text-slate-600 italic"><b style="color: red;">Note:</b> All information just from what I understand. It's not cover everything about <b>ITE</b>. It's just some part of ITE that I took from my experience. </p> 
+        </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-navy-800 bg-navy-950">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-10 sm:flex-row">
+      <p class="text-sm text-white/40">© 2026 ITE Journey — built while learning HTML &amp; Tailwind.</p>
+      <p class="text-sm text-white/40">Made by [Sokkhim]</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

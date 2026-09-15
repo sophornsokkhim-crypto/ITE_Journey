@@ -1,0 +1,54 @@
+/* ================================================================
+   style.css
+   This file only holds the FEW things Tailwind's utility classes
+   can't do by themselves (custom scrollbar, text selection color,
+   the timeline line gradient, and the dashed "photo placeholder"
+   box). Everything else on the site is styled with Tailwind
+   classes written directly in the HTML.
+   ================================================================ */
+
+/* Inter is our body font. Space Grotesk (headings) is applied with
+   the `font-heading` Tailwind class you'll see on <h1>/<h2>/<h3>. */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  scroll-behavior: smooth; /* smooth-scrolls to #anchors, e.g. footer links */
+}
+
+/* Color of text when the visitor highlights/selects it with their mouse */
+::selection {
+  background-color: #ecf805;
+  color: #050b18;
+}
+
+/* Custom scrollbar so it matches the dark navy theme (Chrome/Edge/Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1730;
+}
+::-webkit-scrollbar-thumb {
+  background: #1d3e75;
+  border-radius: 9999px;
+}
+
+/* The vertical line that connects the dots on the My Journey timeline.
+   Used in journey.html as class="timeline-line" on a thin absolute div. */
+.timeline-line {
+  background: linear-gradient(to bottom, #28d1eb, #16305c);
+}
+
+/* Dashed placeholder box for a photo you haven't uploaded yet.
+   HOW TO USE: once you have a real photo, delete the placeholder <div>
+   and replace it with:  <img src="images/yourfile.jpg" alt="..." class="...">
+   Keep the same width/height classes so the layout doesn't shift. */
+.photo-placeholder {
+  border: 2px dashed #1d3e75;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(43, 191, 170, 0.06),
+    rgba(43, 191, 170, 0.06) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}

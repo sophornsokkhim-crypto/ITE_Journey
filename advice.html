@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advice — ITE Journey</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: "#050B18", 900: "#0B1730", 800: "#102244", 700: "#16305C", 600: "#1D3E75" },
+            accent: { 400: "#4FD8C4", 500: "#2BBFAA" },
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+     
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-[#172554] font-body text-slate-800">
+
+  <!-- ================= NAVBAR ("Advice" active) ================= -->
+  <header class="sticky top-0 z-50 border-b border-navy-800 bg-navy-950/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <!-- Logo / site name -->
+      <a href="index.html" class="flex items-center gap-2">
+      <span class="flex h-9 w-9 items-center justify-center rounded-md overflow-hidden">
+      <img src="images/ite_logo.png" alt="ITE Journey Logo" class="h-full w-full object-contain">
+      </span>
+      <span class="text-lg font-semibold text-white" style="font-family: 'Times New Roman', Times, serif;">ITE Journey</span>
+      </a>
+     
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="index.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Home</a>
+        <a href="about.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">About ITE </a>
+        <a href="journey.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">My Journey</a>
+        <a href="subjects.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Subjects</a>
+        <a href="skills.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Skills</a>
+        <a href="projects.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Projects</a>
+        <a href="resources.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Resources</a>
+      </div>
+      <a href="advice.html" class="hidden rounded-md bg-accent-500 px-4 py-2 text-sm font-semibold text-navy-950 md:inline-block">Advice</a>
+      <button id="menu-btn" class="text-white md:hidden" aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden space-y-1 border-t border-navy-800 bg-navy-950 px-6 py-4 md:hidden">
+      <a href="index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Home</a>
+      <a href="about.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">About ITE</a>
+      <a href="journey.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">My Journey</a>
+      <a href="subjects.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Subjects</a>
+      <a href="skills.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Skills</a>
+      <a href="projects.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Projects</a>
+      <a href="resources.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Resources</a>
+      <a href="advice.html" class="block rounded-md px-3 py-2 text-sm font-medium text-accent-400">Advice</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-[#172554] py-16">
+      <div class="mx-auto max-w-6xl px-6">
+        <p class="font-heading sm:text-xl md:text-2xl lg:text-3xl font-semibold text-red-400" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">The personal part</p>
+        <h1 class="mt-3 font-heading sm:text-3xl md:text-4xl font-semibold text-white lg:text-5xl" style="font-family:'Times New Roman', Times, serif ;">
+          A Few Words for Juniors
+        </h1>
+        <p class="mt-4 max-w-xl text-white/60">
+            Nothing is too difficult when we take the time to understand it.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= ADVICE LIST ================= -->
+    <!-- Styled as a running list with a left accent border, closer to a
+         notebook page than a grid of identical cards — it fits the
+         personal, sequential feel of "things I wish I knew" better. -->
+    <section class="bg-white py-16">
+      <div class="mx-auto max-w-3xl space-y-8 px-6">
+
+        <div class="border-l-4 border-accent-500 pl-6">
+          <h2 class="font-heading text-lg font-semibold text-navy-950" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Programming is difficult at first — and that's normal.</h2>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">
+            Everyone feels lost in the beginning. It doesn't mean you're bad at this.
+          </p>
+        </div>
+
+        <div class="border-l-4 border-accent-500 pl-6">
+          <h2 class="font-heading text-lg font-semibold text-navy-950" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">You don't need to memorize every piece of code.</h2>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">
+            Knowing where to look something up matters far more than memorizing syntax.
+          </p>
+        </div>
+
+        <div class="border-l-4 border-accent-500 pl-6">
+          <h2 class="font-heading text-lg font-semibold text-navy-950" style="font-family: 'Times New Roman', Times, serif;">Understanding concepts matters more than copying code.</h2>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">
+            Code you copy without understanding won't help you the next time it breaks.
+          </p>
+        </div>
+
+        <div class="border-l-4 border-accent-500 pl-6">
+          <h2 class="font-heading text-lg font-semibold text-navy-950" style="font-family: Arial, Helvetica, sans-serif;">Build projects instead of only watching tutorials.</h2>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">
+            Tutorials feel productive, but real learning happens when you get stuck on your own project.
+          </p>
+        </div>
+
+        <div class="border-l-4 border-accent-500 pl-6">
+          <h2 class="font-heading text-lg font-semibold text-navy-950" style="font-family: Georgia, 'Times New Roman', Times, serif;">Learn how to search and debug.</h2>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">
+            Reading error messages carefully and searching well are skills on their own — practice them.
+          </p>
+        </div>
+
+        <div class="border-l-4 border-accent-500 pl-6">
+          <h2 class="font-heading text-lg font-semibold text-navy-950" style="font-family: 'Times New Roman', Times, serif;">Don't compare your progress with other students.</h2>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">
+            Everyone learns at a different pace. Compare yourself to who you were last semester, not to your classmates.
+          </p>
+        </div>
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="max-w-xl">
+          <p class="mt-3 text-slate-600 italic"><b style="color: red;">Note:</b> All information just from what I understand. It's not cover everything about <b>ITE</b>. It's just some part of ITE that I took from my experience. </p> 
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing note -->
+    <section class="bg-[#172554] py-16">
+      <div class="mx-auto max-w-2xl px-6 text-center">
+        <p class="font-heading text-xl font-medium text-white" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+         If you're a junior ITE student reading this — you'll be fine. You don't need to know everything right now. Just keep learning, keep practicing, and keep going.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-navy-800 bg-navy-950">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-10 sm:flex-row">
+      <p class="text-sm text-white/40">© 2026 ITE Journey — built while learning HTML &amp; Tailwind.</p>
+      <p class="text-sm text-white/40">Made by [Sokkhim]</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITE Journey — Home</title>
+
+  <!-- Google Fonts: "Space Grotesk" for headings (technical feel),
+       "Inter" for body text (very readable at small sizes). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS, loaded straight from a CDN: no npm install, no build
+       step. Good for learning, fine for a personal site like this. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // This block teaches Tailwind our own custom colors + fonts, so we
+    // can write classes like `bg-navy-900` or `font-heading` anywhere
+    // in the HTML below, exactly like Tailwind's built-in classes.
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: "#050B18", // page background / footer
+              900: "#0B1730", // header background / dark sections
+              800: "#102244", // card surfaces on dark sections
+              700: "#16305C", // borders on dark sections
+              600: "#1D3E75", // hover borders / accents
+            },
+            accent: {
+              400: "#4FD8C4", // bright teal — links, highlights, small UI bits
+              500: "#2BBFAA", // solid teal — buttons
+            },
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Our own tiny stylesheet for the few things Tailwind can't do -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-slate-50 font-body text-slate-800">
+
+  <!-- ================= NAVBAR =================
+       Same navbar markup is repeated at the top of every page.
+       The only thing that changes between pages is which link
+       gets the "text-accent-400" (active) styling. -->
+  <header class="sticky top-0 z-50 border-b border-navy-800 bg-navy-950/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+
+      <!-- Logo / site name -->
+       <a href="index.html" class="flex items-center gap-2">
+      <span class="flex h-9 w-9 items-center justify-center rounded-md overflow-hidden">
+      <img src="images/ite_logo.png" alt="ITE Journey Logo" class="h-full w-full object-contain">
+      </span>
+
+      <span class="text-lg font-semibold text-white" style="font-family: 'Times New Roman', Times, serif;">ITE Journey</span>
+      </a>
+ 
+
+      <!-- Desktop navigation links (hidden on small screens with `hidden md:flex`) -->
+       <div class="hidden items-center gap-8 md:flex">
+        <a href="index.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Home</a>
+        <a href="about.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">About ITE </a>
+        <a href="journey.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">My Journey</a>
+        <a href="subjects.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Subjects</a>
+        <a href="skills.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Skills</a>
+        <a href="projects.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Projects</a>
+        <a href="resources.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Resources</a>
+      </div>
+
+      <!-- Advice button -->
+        <a
+          href="advice.html"
+          class="hidden rounded-md bg-accent-500 px-4 py-2 text-sm font-semibold text-navy-950 transition hover:bg-accent-400 md:inline-block">Advice
+        </a>
+
+
+
+      <!-- Hamburger button, only visible on mobile (`md:hidden`) -->
+      <button id="menu-btn" class="text-white md:hidden" aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile menu panel: starts hidden, script.js toggles the "hidden" class -->
+     <div id="mobile-menu"
+     class="hidden space-y-1 border-t border-navy-800 bg-navy-950 px-6 py-4 md:hidden">
+
+  <a href="index.html"
+     class="nav-link block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:text-[#ecf805]">
+    Home
+  </a>
+
+  <a href="about.html"
+     class="nav-link block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:text-[#ecf805]">
+    About ITE
+  </a>
+
+  <a href="journey.html"
+     class="nav-link block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:text-[#ecf805]">
+    My Journey
+  </a>
+
+  <a href="subjects.html"
+     class="nav-link block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:text-[#ecf805]">
+    Subjects
+  </a>
+
+  <a href="skills.html"
+     class="nav-link block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:text-[#ecf805]">
+    Skills
+  </a>
+
+  <a href="projects.html"
+     class="nav-link block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:text-[#ecf805]">
+    Projects
+  </a>
+
+  <a href="resources.html"
+     class="nav-link block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:text-[#ecf805]">
+    Resources
+  </a>
+
+  <a href="advice.html"
+     class="nav-link block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:text-[#ecf805]">
+    Advice
+  </a>
+
+</div>
+
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden bg-navy-950">
+
+  <!-- Background images -->
+  <div class="absolute inset-0">
+    
+    <img
+      src="images/stem.jpg"
+      class="hero-slide absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-1000"
+      alt=""
+    />
+
+    <img
+      src="images/stem2.jpg"
+      class="hero-slide absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-1000"
+      alt=""
+    />
+
+    <img
+      src="images/ite_logo.png"
+      class="hero-slide absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-1000"
+      alt=""
+    />
+    <img
+      src="images/ite_depart.png"
+      class="hero-slide absolute inset-0 h-full w-full object-contain opacity-0 transition-opacity duration-1000"
+      alt=""
+    />
+    <img
+      src="images/engin_buil.jpg"
+      class="hero-slide absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-1000"
+      alt=""
+    />
+
+  </div>
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-navy-950/75"></div>
+  <!-- Hero content -->
+  <div class="relative mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 sm:py-24 md:grid-cols-2 md:gap-12 md:py-28">
+    <!-- Your existing left content -->
+    <div class="max-w-2xl">
+
+  <!-- Introduction label with decorative ruler -->
+   <div class="mb-4 flex items-center gap-3">
+    <span class="h-1 w-14 rounded-full bg-accent-500"></span>
+    <p class="font-heading text-sm font-semibold leading-6 text-accent-400 sm:text-base md:text-lg">
+      Student journal · Information Technology Engineering
+    </p>
+  </div>
+
+  <!-- Main title -->
+  <h1
+    class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl"
+    style="font-family: 'Times New Roman', Times, serif;"
+  >
+    ITE Journey
+  </h1>
+
+  <!-- Description -->
+  <p class="mt-6 max-w-xl text-base leading-7 text-white/70 md:text-lg md:leading-8">
+    This website shares my learning journey as an ITE student —
+    the subjects I've studied, the programming languages I've picked up,
+    the projects I've built, and the challenges I've faced.
+  </p>
+  <!-- Buttons -->
+  <div class="mt-8 flex flex-wrap gap-4">
+    <a
+      href="journey.html"
+      class="rounded-md bg-accent-500 px-5 py-3 text-sm font-semibold text-navy-950 transition hover:bg-accent-400"
+    >
+      Explore my journey
+    </a>
+    <a
+      href="about.html"
+      class="rounded-md border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:border-accent-500"
+    >
+      What is ITE?
+    </a>
+
+  </div>
+
+</div>
+
+
+
+    <!-- Your code editor -->
+    <div class="overflow-hidden rounded-xl bg-navy-900/90 shadow-2xl ring-1 ring-white/10">
+      <!-- keep your existing code editor here -->
+    </div>
+
+  </div>
+</section>
+    <!-- ================= WHAT YOU'LL FIND HERE ================= -->
+    <section class="bg-dark-350 py-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="max-w-xl">
+          <h2 class="text-3xl font-semibold text-blue-700 sm:text-4xl md:text-5xl" style="font-family: Georgia, 'Times New Roman', serif;">What you'll find here</h2>
+          <p class="mt-3 text-base leading-7 text-slate-600 sm:text-lg">
+            Everything I wish I had known when I first started studying ITE.
+          </p>
+        </div>
+
+        <!-- Grid of 3 link cards. Each links to a real page on the site. -->
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="subjects.html" class="group rounded-xl border border-slate-200 bg-white p-7 text-center transition hover:border-navy-600 hover:shadow-md">
+
+          <div class="text-5xl">📚</div>
+
+          <h3 class="mt-5 font-heading text-lg font-semibold text-blue-500"
+              style="font-family: Georgia, 'Times New Roman', serif;">
+              What I learned</h3>
+
+            <ul class="mt-2 list-disc pl-5 text-left text-sm leading-relaxed text-slate-600">
+              <li>What is Technology? How to solve the problem by using that technology?</li>
+              <li>General knowledge</li>
+              <li>Designing</li>
+              <li>How to transfer the theory of Math and Physics to solve the real problem</li>
+              <li>Programming languages</li>
+              <li>How to make Website and System</li>
+            </ul>
+             <p class="mt-4 text-sm-2xl leading-relaxed text-slate-600" style="color: rgb(120, 68, 4);">
+                One of the most important lessons I learned as an ITE student is to learn technology, not just follow what the lecturer teaches. Lecturers cannot teach us everything, so we should take what we learn in class as a starting point, research more about each topic, and apply our knowledge to real-world projects and problems.
+            </p>
+            <span class="mt-4 inline-block text-sm font-semibold text-accent-500 group-hover:underline">See subjects</span>
+          </a>
+
+          <a href="projects.html" class="group rounded-xl border border-slate-200 bg-white p-7 text-center transition hover:border-navy-600 hover:shadow-md">
+
+          <div class="text-5xl">💻</div>
+          <h3 class="mt-5 font-heading text-lg font-semibold text-red-800"
+              style="font-family: Georgia, 'Times New Roman', serif;">
+              My projects</h3>
+            <ul class="mt-2 list-disc pl-5 text-left text-sm leading-relaxed text-slate-600">
+              <li>Inventory Management Sytem</li>
+              <li>Cashew website</li>
+              <li>ITE Journey Website</li>
+              <li>Tourism Revenue Analysis</li>
+              <li>Portfolio Website</li>
+              <li>Programming Project</li>
+              <li>Database Projects</li>
+              <li>University Assignments</li>
+              <li>Group projects</li>
+              <li>Real-world problem solving</li>
+            </ul>
+             <p class="mt-4 text-sm-2xl leading-relaxed text-slate-600" style="color: rgb(154, 11, 49);">
+                Through these projects, I learned how to turn theory into practical solutions, solve problems, work with different technologies, and improve my programming skills through practice.
+            </p>
+            <span class="mt-4 inline-block text-sm font-semibold text-accent-500 group-hover:underline">See subjects</span>
+          </a>
+
+           <a href="advice.html" class="group rounded-xl border border-slate-200 bg-white p-7 text-center transition hover:border-navy-600 hover:shadow-md">
+
+          <div class="text-5xl">💡</div>
+          <h3 class="mt-5 font-heading text-lg font-semibold text-green-600"
+              style="font-family: Georgia, 'Times New Roman', serif;">
+              Advices for juniors</h3>
+            <ul class="mt-2 list-disc pl-5 text-left text-sm leading-relaxed text-slate-600">
+              <li>Search for more information</li>
+              <li>Practice what you learn</li>
+              <li>build small project</li>
+              <li>Learn from mistakes</li>
+              <li>Don't be afraid of difficult subjects</li>
+              <li>Improve your english</li>
+              <li>Learn how to use documentations</li>
+              <li>Ask the questions when you stuck</li>
+              <li>Manage your time</li>
+              <li>Focus on understanding, not memorizing</li>
+            </ul>
+            <p class="mt-4 text-2xl leading-relaxed" style="color: rgb(120, 68, 4);">
+            <span class="px-2 italic font-bold">
+                 "The more you learn, the more you know!" </span>
+            </p>
+           
+            <span class="mt-4 inline-block text-sm font-semibold text-accent-500 group-hover:underline">See subjects</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ================= JOURNEY PREVIEW ================= -->
+    <section class="bg-blue-50 py-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="max-w-xl">
+          <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl font-semibold text-blue-700" style="font-family: Georgia, 'Times New Roman', serif;" >From year 1 to year 2</h2>
+          <p class="mt-3 text-slate-600">A quick look at how the journey has progressed so far.</p>
+        </div>
+
+        <!-- These 3 steps really are sequential (chronological), so numbering
+             them like this is meaningful here — not just decoration. -->
+        <div class="mt-12 grid gap-px overflow-hidden rounded-xl bg-slate-200 md:grid-cols-3">
+
+          <div class="bg-yellow-50 p-8">
+            <span class="font-heading text-sm font-semibold text-accent-500" style="font-family: Georgia, 'Times New Roman', serif;">01 — Year 1, Sem 1</span>
+            <h3 class="mt-3 font-heading text-lg font-semibold text-yellow-950" style="font-family: Georgia, 'Times New Roman', serif;">Foundations</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">
+              Mathematics, computer fundamentals, English, and academic skills — the base everything else builds on.
+            </p>
+          </div>
+
+          <div class="bg-green-100 p-8">
+            <span class="font-heading text-sm font-semibold text-accent-500" style="font-family: Georgia, 'Times New Roman', serif;">02 — Year 1, Sem 2</span>
+            <h3 class="mt-3 font-heading text-lg font-semibold text-green-700" style="font-family: Georgia, 'Times New Roman', serif;">Start to practice coding</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">
+              Basic programming, statistics, and an introduction to electrical & electronic engineering.
+            </p>
+          </div>
+
+          <div class="bg-blue p-3">
+            <span class="font-heading text-sm font-semibold text-accent-400" style="font-family: Georgia, 'Times New Roman', serif;">03 — Year 2</span>
+            <h3 class="mt-3 font-heading text-lg font-semibold text-red" style="font-family: Georgia, 'Times New Roman', serif;">Going deeper</h3>
+            <p class="mt-2 text-sm leading-relaxed text-black/60">
+              Java, data structures & algorithms, databases, data communications, and real project practicums.
+            </p>
+          </div>
+        </div>
+        <div class="mt-10">
+          <a href="journey.html" class="text-sm font-semibold text-accent-500 hover:underline">See the full journey</a>
+        </div>
+      </div>
+       <div class="mx-auto max-w-6xl px-6">
+        <div class="max-w-xl">
+          <p class="mt-3 text-slate-600 italic"><b style="color: red;">Note:</b> All information just from what I understand. It's not cover everything about <b>ITE</b>. It's just some part of ITE that I took from my experience. </p> 
+        </div>
+     
+    </section>
+    <!-- ================= QUOTE ================= -->
+    <section class="bg-navy-900">
+      <div class="mx-auto max-w-2xl px-6 text-center">
+        <p class="font-heading text-2xl font-medium leading-snug text-white sm:text-3xl" style="font-family: Georgia, 'Times New Roman', serif;">
+          You don't need to know everything before you start. You just need to keep going.
+        </p>
+        <p class="mt-6 text-sm text-white/40">— a lesson from my first two years in ITE</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-navy-800 bg-navy-950">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-10 sm:flex-row">
+      <p class="text-sm text-white/40">© 2026 ITE Journey — built while learning HTML &amp; Tailwind.</p>
+      <p class="text-sm text-white/40">Made by [Sokkhim]</p>
+    </div>
+  </footer>
+
+  <!-- Shared mobile-menu script, loaded last so the elements above already exist -->
+  <script src="script.js"></script>
+</body>
+</html>

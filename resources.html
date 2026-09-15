@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources — ITE Journey</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: "#050B18", 900: "#0B1730", 800: "#102244", 700: "#16305C", 600: "#1D3E75" },
+            accent: { 400: "#4FD8C4", 500: "#2BBFAA" },
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+  
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-slate-50 font-body text-slate-800">
+
+  <!-- ================= NAVBAR ("Resources" active) ================= -->
+  <header class="sticky top-0 z-50 border-b border-navy-800 bg-navy-950/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <!-- Logo / site name -->
+      <a href="index.html" class="flex items-center gap-2">
+      <span class="flex h-9 w-9 items-center justify-center rounded-md overflow-hidden">
+      <img src="images/ite_logo.png" alt="ITE Journey Logo" class="h-full w-full object-contain">
+      </span>
+
+      <span class="text-lg font-semibold text-white" style="font-family: 'Times New Roman', Times, serif;">ITE Journey</span>
+      </a>
+     
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="index.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Home</a>
+        <a href="about.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">About ITE </a>
+        <a href="journey.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">My Journey</a>
+        <a href="subjects.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Subjects</a>
+        <a href="skills.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Skills</a>
+        <a href="projects.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Projects</a>
+        <a href="resources.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Resources</a>
+       
+      </div>
+      <a href="advice.html" class="hidden rounded-md bg-accent-500 px-4 py-2 text-sm font-semibold text-navy-950 transition hover:bg-accent-400 md:inline-block">Advice</a>
+      <button id="menu-btn" class="text-white md:hidden" aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden space-y-1 border-t border-navy-800 bg-navy-950 px-6 py-4 md:hidden">
+      <a href="index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Home</a>
+      <a href="about.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">About ITE</a>
+      <a href="journey.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">My Journey</a>
+      <a href="subjects.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Subjects</a>
+      <a href="skills.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Skills</a>
+      <a href="projects.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Projects</a>
+      <a href="resources.html" class="block rounded-md px-3 py-2 text-sm font-medium text-accent-400">Resources</a>
+      <a href="advice.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Advice</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-[#172554] py-16">
+      <div class="mx-auto max-w-6xl px-6">
+        <p class="font-heading sm:text-xl md:text-2xl lg:text-3xl font-semibold text-accent-400" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Where to learn more</p>
+        <h1 class="mt-3 font-heading sm-text-5xl md:text-6xl lg:text-7xl font-semibold text-white sm:text-5xl" style="font-family: 'Times New Roman', Times, serif;">Resources</h1>
+        <p class="mt-4 max-w-xl text-white/60">
+          A short list of places I actually use to learn technology outside of class.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= RESOURCE LIST ================= -->
+    <section class="bg-white py-16">
+      <div class="mx-auto max-w-4xl px-6 space-y-12">
+
+        <!-- Each category is a simple list of rows, not a grid of cards —
+             a link list reads faster than boxes when there's this much text. -->
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-blue-950" style="font-family: 'Times New Roman', Times, serif ;">Learn to code</h2>
+          <div class="mt-4 divide-y divide-slate-200 rounded-xl border border-slate-200">
+            <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener" class="flex items-center justify-between p-4 hover:bg-slate-50">
+              <div>
+                <p class="font-medium text-navy-950">freeCodeCamp</p>
+                <p class="text-sm text-slate-500">Free, structured courses covering web dev, Python, and more.</p>
+              </div>
+              <span class="text-accent-500">↗</span>
+            </a>
+            <a href="https://www.w3schools.com/" target="_blank" rel="noopener" class="flex items-center justify-between p-4 hover:bg-slate-50">
+              <div>
+                <p class="font-medium text-navy-950">W3Schools</p>
+                <p class="text-sm text-slate-500">Quick reference and try-it-yourself editor for HTML, CSS, JS, and more.</p>
+              </div>
+              <span class="text-accent-500">↗</span>
+            </a>
+            <a href="https://developer.mozilla.org/" target="_blank" rel="noopener" class="flex items-center justify-between p-4 hover:bg-slate-50">
+              <div>
+                <p class="font-medium text-navy-950">MDN Web Docs</p>
+                <p class="text-sm text-slate-500">The most reliable reference for HTML, CSS, and JavaScript.</p>
+              </div>
+              <span class="text-accent-500">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-red-800" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Practice & problem solving</h2>
+          <div class="mt-4 divide-y divide-slate-200 rounded-xl border border-slate-200">
+            <a href="https://leetcode.com/" target="_blank" rel="noopener" class="flex items-center justify-between p-4 hover:bg-slate-50">
+              <div>
+                <p class="font-medium text-navy-950">LeetCode</p>
+                <p class="text-sm text-slate-500">Practice data structures &amp; algorithms with real interview-style problems.</p>
+              </div>
+              <span class="text-accent-500">↗</span>
+            </a>
+            <a href="https://www.hackerrank.com/" target="_blank" rel="noopener" class="flex items-center justify-between p-4 hover:bg-slate-50">
+              <div>
+                <p class="font-medium text-navy-950">HackerRank</p>
+                <p class="text-sm text-slate-500">Coding challenges across many languages and skill levels.</p>
+              </div>
+              <span class="text-accent-500">↗</span>
+            </a>
+            <a href="https://www.geeksforgeeks.org/" target="_blank" rel="noopener" class="flex items-center justify-between p-4 hover:bg-slate-50">
+              <div>
+                <p class="font-medium text-navy-950">GeeksforGeeks</p>
+                <p class="text-sm text-slate-500">Explanations and examples for CS fundamentals and interview prep.</p>
+              </div>
+              <span class="text-accent-500">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-greem-850" style="font-family: Arial, Helvetica, sans-serif;">Courses & video learning</h2>
+          <div class="mt-4 divide-y divide-slate-200 rounded-xl border border-slate-200">
+            <a href="https://www.coursera.org/" target="_blank" rel="noopener" class="flex items-center justify-between p-4 hover:bg-slate-50">
+              <div>
+                <p class="font-medium text-navy-950">Coursera</p>
+                <p class="text-sm text-slate-500">University-style courses, many free to audit.</p>
+              </div>
+              <span class="text-accent-500">↗</span>
+            </a>
+            <a href="https://www.youtube.com/@freecodecamp" target="_blank" rel="noopener" class="flex items-center justify-between p-4 hover:bg-slate-50">
+              <div>
+                <p class="font-medium text-navy-950">freeCodeCamp on YouTube</p>
+                <p class="text-sm text-slate-500">Full-length, free courses on nearly every programming topic.</p>
+              </div>
+              <span class="text-accent-500">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-orange-750">Tools</h2>
+          <div class="mt-4 divide-y divide-slate-200 rounded-xl border border-slate-200">
+            <a href="https://github.com/" target="_blank" rel="noopener" class="flex items-center justify-between p-4 hover:bg-slate-50">
+              <div>
+                <p class="font-medium text-navy-950">GitHub</p>
+                <p class="text-sm text-slate-500">Host code, track versions, and build a portfolio of projects.</p>
+              </div>
+              <span class="text-accent-500">↗</span>
+            </a>
+             <a href="https://render.com/" target="_blank" rel="noopener" class="flex items-center justify-between p-4 hover:bg-slate-50">
+              <div>
+                <p class="font-medium text-navy-950">Render</p>
+                <p class="text-sm text-slate-500">Host Backend code </p>
+              </div>
+              <span class="text-accent-500">↗</span>
+            </a>
+            <a href="https://vercel.com/kh-b8cb" target="_blank" rel="noopener" class="flex items-center justify-between p-4 hover:bg-slate-50">
+              <div>
+                <p class="font-medium text-navy-950">Vercel</p>
+                <p class="text-sm text-slate-500">Host Backend & Frontend code </p>
+              </div>
+              <span class="text-accent-500">↗</span>
+             
+            </a>
+             <a href=" https://www.mongodb.com/products/platform/atlas-database" target="_blank" rel="noopener" class="flex items-center justify-between p-4 hover:bg-slate-50">
+              <div>
+                <p class="font-medium text-navy-950">MongoDB Atlas</p>
+                <p class="text-sm text-slate-500">Host MongoDB Database</p>
+              </div>
+              <span class="text-accent-500">↗</span>
+            </a>
+             <a href=" https://www.figma.com/files/team/1594378455010765292/recents-and-sharing/recently-viewed?fuid=1594378452988669219" target="_blank" rel="noopener" class="flex items-center justify-between p-4 hover:bg-slate-50">
+              <div>
+                <p class="font-medium text-navy-950">Figma</p>
+                <p class="text-sm text-slate-500">UI design</p>
+              </div>
+              <span class="text-accent-500">↗</span>
+            </a>
+            <a href="https://firebase.google.com/?utm_source=google&utm_medium=cpc&utm_campaign=Cloud-SS-DR-Firebase-FY26-global-gsem-1713590&utm_content=text-ad&utm_term=KW_firebase&gclsrc=aw.ds&gad_source=1&gad_campaignid=23417478209&gbraid=0AAAAADpUDOjrraMIxAz7j6XQtqMkf7baM&gclid=CjwKCAjwtp7VBhBjEiwAJfpV-1FolUEW1N2EqXpb-mIl8FPvF1dLuH4T6TX5dq4zICMxQPvQRLB5mhoCcl4QAvD_BwE" target="_blank" rel="noopener" class="flex items-center justify-between p-4 hover:bg-slate-50">
+              <div>
+                <p class="font-medium text-navy-950">Firebase</p>
+                <p class="text-sm text-slate-500">Cloud app backend</p>
+              </div>
+              <span class="text-accent-500">↗</span>
+            </a>
+         
+            <a href="https://stackoverflow.com/" target="_blank" rel="noopener" class="flex items-center justify-between p-4 hover:bg-slate-50">
+              <div>
+                <p class="font-medium text-navy-950">Stack Overflow</p>
+                <p class="text-sm text-slate-500">Search here first — almost every bug has already been asked about.</p>
+              </div>
+              <span class="text-accent-500">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="max-w-xl">
+          <p class="mt-3 text-slate-600 italic"><b style="color: red;">Note:</b> All information just from what I understand. It's not cover everything about <b>ITE</b>. It's just some part of ITE that I took from my experience. </p> 
+        </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-navy-800 bg-navy-950">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-10 sm:flex-row">
+      <p class="text-sm text-white/40">© 2026 ITE Journey — built while learning HTML &amp; Tailwind.</p>
+      <p class="text-sm text-white/40">Made by [Sokkhim]</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — ITE Journey</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: "#050B18", 900: "#0B1730", 800: "#102244", 700: "#16305C", 600: "#1D3E75" },
+            accent: { 400: "#4FD8C4", 500: "#2BBFAA" },
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+     
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-slate-50 font-body text-slate-800">
+
+  <!-- ================= NAVBAR ("Projects" active) ================= -->
+  <header class="sticky top-0 z-50 border-b border-navy-800 bg-navy-950/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <!-- Logo / site name -->
+      <a href="index.html" class="flex items-center gap-2">
+      <span class="flex h-9 w-9 items-center justify-center rounded-md overflow-hidden">
+      <img src="images/ite_logo.png" alt="ITE Journey Logo" class="h-full w-full object-contain">
+      </span>
+
+      <span class="text-lg font-semibold text-white" style="font-family: 'Times New Roman', Times, serif;">ITE Journey</span>
+      </a>
+    
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="index.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Home</a>
+        <a href="about.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">About ITE </a>
+        <a href="journey.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">My Journey</a>
+        <a href="subjects.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Subjects</a>
+        <a href="skills.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Skills</a>
+        <a href="projects.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Projects</a>
+        <a href="resources.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Resources</a>
+      </div>
+      <a href="advice.html" class="hidden rounded-md bg-accent-500 px-4 py-2 text-sm font-semibold text-navy-950 transition hover:bg-accent-400 md:inline-block">Advice</a>
+      <button id="menu-btn" class="text-white md:hidden" aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden space-y-1 border-t border-navy-800 bg-navy-950 px-6 py-4 md:hidden">
+      <a href="index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Home</a>
+      <a href="about.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">About ITE</a>
+      <a href="journey.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">My Journey</a>
+      <a href="subjects.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Subjects</a>
+      <a href="skills.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Skills</a>
+      <a href="projects.html" class="block rounded-md px-3 py-2 text-sm font-medium text-accent-400">Projects</a>
+      <a href="resources.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Resources</a>
+      <a href="advice.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Advice</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative min-h-[600px] overflow-hidden bg-navy-950">
+
+  <!-- Background images -->
+      <div class="absolute inset-0">
+    
+          <img
+      src="images/project.jpg"
+      class="hero-slide absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-1000"
+      alt=""
+    />
+
+           <img
+      src="images/project0.jpg"
+      class="hero-slide absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-1000"
+      alt=""
+    />
+
+           <img
+      src="images/ite_logo.png"
+      class="hero-slide absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-1000"
+      alt=""
+    />
+
+  </div>
+  <!-- Dark overlay -->
+         <div class="absolute inset-0 bg-navy-950/75"></div>
+  <!-- Hero content -->
+         <div class="relative mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 sm:py-24 md:grid-cols-2 md:gap-12 md:py-28">
+    <!-- Your existing left content -->
+        <div class="max-w-2xl">
+
+  <!-- Introduction label with decorative ruler -->
+        <div class="mb-4 flex items-center gap-3">
+        <span class="h-1 w-14 rounded-full bg-accent-500"></span>
+        <p class="font-heading text-sm font-semibold leading-6 text-accent-400 sm:text-base md:text-lg">
+      Projects I've built
+    </p>
+  </div>
+
+  <!-- Main title -->
+      <h1
+    class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl"
+    style="font-family: 'Times New Roman', Times, serif;"
+  >
+    Projects
+  </h1>
+
+  <!-- Description -->
+      <p class="mt-6 max-w-xl text-base leading-7 text-white/70 md:text-lg md:leading-8">
+    All projects are not perfect, but at least we can build it.
+  </p>
+
+  </div>
+  </div>
+
+</section>
+
+    <!-- ================= PROJECT LIST ================= -->
+    <section class="bg-white py-16">
+      <div class="mx-auto max-w-5xl space-y-16 px-6">
+
+        <!--
+          Each project below alternates image-left/image-right on desktop
+          (using `md:order-2`) so the page doesn't feel like a repeated,
+          identical card stamped out three times.
+        -->
+
+        <!-- ===== Project 1 ===== -->
+<div class="grid items-center gap-10 md:grid-cols-2">
+
+  <!-- Video on the left -->
+  <div>
+    <video
+      class="aspect-video w-full rounded-xl object-cover"
+      controls
+    >
+      <source src="video/pro1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Project information on the right -->
+  <div>
+    <p class="font-heading text-sm font-semibold text-accent-500 text-red">
+      Project Year 1
+    </p>
+
+    <h2 class="mt-2 font-heading sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-navy-950" style="font-family:Arial, Helvetica, sans-serif">
+      Smart Dash Bin
+    </h2>
+
+    <p class="mt-3 text-sm leading-relaxed text-slate-600">
+      This project was not built by me alone; it was a team project for the
+      IEEE course. The project uses Arduino to control the bin. When someone
+      moves their hand near the cover, the Arduino detects the movement and
+      automatically opens the bin without the need to touch it.
+    </p>
+
+    <!-- Programming Information -->
+    <div class="mt-5 space-y-2">
+      <p class="text-sm text-slate-600">
+        <span class="font-semibold text-navy-950" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+          Programming Language:
+        </span>
+        C/C++
+      </p>
+
+      <p class="text-sm text-slate-600" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <span class="font-semibold text-navy-950">
+          Platform:
+        </span>
+        Arduino
+      </p>
+       <!-- Recommended Resources -->
+           <div class="mt-5">
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://projecthub.arduino.cc/angadiameya007/smart-dustbin-80b6af" style="color: blue;" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                </div>
+                </div>
+    </div>
+  </div>
+
+</div>
+
+        <!-- ===== Project 2 (image on the right on desktop) ===== -->
+         <div class="grid items-center gap-10 md:grid-cols-2">
+
+  <!-- Video on the left -->
+  <div>
+    <video
+      class="aspect-video w-full rounded-xl object-cover"
+      controls
+    >
+      <source src="video/pro2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Project information on the right -->
+  <div>
+    <p class="font-heading text-sm font-semibold text-accent-500 text-red">
+      Project Year 2
+    </p>
+
+    <h2 class="mt-2 font-heading sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-navy-950" style="font-family:Arial, Helvetica, sans-serif">
+      Khmer Cashews Website
+    </h2>
+
+    <p class="mt-3 text-sm leading-relaxed text-slate-600">
+      This project was built by myself. it was a project for the
+      WCT course. It's a normal website has no logic or data store just webpages that shows about selling Cashew products.
+
+    </p>
+
+    <!-- Programming Information -->
+    <div class="mt-5 space-y-2">
+      <p class="text-sm text-slate-600">
+        <span class="font-semibold text-navy-950" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+          Programming Language:
+        </span>
+        HTML
+        C++
+      </p>
+      <p class="text-sm text-slate-600">
+        <span class="font-semibold text-navy-950" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+          Framework:
+        </span>
+        Boostrap
+      </p>
+
+      <p class="text-sm text-slate-600" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <span class="font-semibold text-navy-950">
+          Platform:
+        </span>
+        GitHub
+      </p>
+       <!-- Recommended Resources -->
+           <div class="mt-5">
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="https://ruppprojectkhim.github.io/cashew-project-website/" style="color: blue;" target="_blank" rel="noopener noreferrer">See more →</a>
+                </div>
+                </div>
+    </div>
+  </div>
+
+</div>
+       
+
+        <!-- ===== Project 3 ===== -->
+    <div class="grid items-center gap-10 md:grid-cols-2">
+
+  <!-- Video on the left -->
+      <div>
+    <video
+      class="aspect-video w-full rounded-xl object-cover"
+      controls
+    >
+      <source src="video/project3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Project information on the right -->
+      <div>
+    <p class="font-heading text-sm font-semibold text-accent-500 text-red">
+      Project Year 2
+    </p>
+
+     <h2 class="mt-2 font-heading sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-navy-950" style="font-family:Arial, Helvetica, sans-serif">
+      Inventory Management System
+    </h2>
+
+    <p class="mt-3 text-sm leading-relaxed text-slate-600">
+      This project was built by myself. it was a project for the
+      WCT course. This project helped me understand how frontend, backend, database, and deployment work together. I also learned that building a full-stack application is not only about writing code. Debugging API errors, connecting the database, managing authentication, and deploying the application were also important parts of the process.
+
+    </p>
+
+    <!-- Programming Information -->
+    <div class="mt-5 space-y-2">
+      <p class="text-sm text-slate-600">
+        <span class="font-semibold text-navy-950" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+          Programming Language:
+        </span>
+        HTML
+        Javascript
+        CSS
+      </p>
+      <p class="text-sm text-slate-600">
+        <span class="font-semibold text-navy-950" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+          Framework:
+        </span>
+        React.js
+        Express.js
+        Tailwind CSS
+        Mongoose
+        Axios
+        React Router
+        Vite
+      </p>
+
+      <p class="text-sm text-slate-600" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <span class="font-semibold text-navy-950">
+          Platform:
+        </span>
+        GitHub
+        Vercel 
+        Render
+        MongoDB Atlas
+      </p>
+       <!-- Recommended Resources -->
+           <div class="mt-5">
+                  <div class="mt-3 flex flex-wrap gap-3">
+                  <a href="inventory-management-system-basic-3.vercel.app" style="color: blue;" target="_blank" rel="noopener noreferrer">See more →</a>
+                  <a href="https://github.com/sophornsokkhim-crypto/Inventory-Management-System-Basic-" style="color: blue;" target="_blank" rel="noopener noreferrer">See more →</a>
+                </div>
+                </div>
+    </div>
+  </div>
+
+</div>
+       
+      
+      </div>
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="max-w-xl">
+          <p class="mt-3 text-slate-600 italic">""These projects are just some of project there are many project, but mostly team project and some of my project it's not good too. I just show what I think it's better." </p> 
+          <p class="mt-3 text-slate-600 italic"><b style="color: red;">Note:</b> All information just from what I understand. It's not cover everything about <b>ITE</b>. It's just some part of ITE that I took from my experience. </p> 
+        </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-navy-800 bg-navy-950">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-10 sm:flex-row">
+      <p class="text-sm text-white/40">© 2026 ITE Journey — built while learning HTML &amp; Tailwind.</p>
+      <p class="text-sm text-white/40">Made by [Sokkhim]</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

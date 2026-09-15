@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills — ITE Journey</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: "#050B18", 900: "#0B1730", 800: "#102244", 700: "#16305C", 600: "#1D3E75" },
+            accent: { 400: "#4FD8C4", 500: "#2BBFAA" },
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-slate-50 font-body text-slate-800">
+
+  <!-- ================= NAVBAR ("Skills" active) ================= -->
+  <header class="sticky top-0 z-50 border-b border-navy-800 bg-navy-950/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <!-- Logo / site name -->
+      <a href="index.html" class="flex items-center gap-2">
+      <span class="flex h-9 w-9 items-center justify-center rounded-md overflow-hidden">
+      <img src="images/ite_logo.png" alt="ITE Journey Logo" class="h-full w-full object-contain">
+      </span>
+
+      <span class="text-lg font-semibold text-white" style="font-family: 'Times New Roman', Times, serif;">ITE Journey</span>
+      </a>
+    
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="index.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Home</a>
+        <a href="about.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">About ITE </a>
+        <a href="journey.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">My Journey</a>
+        <a href="subjects.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Subjects</a>
+        <a href="skills.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Skills</a>
+        <a href="projects.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Projects</a>
+        <a href="resources.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Resources</a>
+      </div>
+      <a href="advice.html" class="hidden rounded-md bg-accent-500 px-4 py-2 text-sm font-semibold text-navy-950 transition hover:bg-accent-400 md:inline-block">Advice</a>
+      <button id="menu-btn" class="text-white md:hidden" aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden space-y-1 border-t border-navy-800 bg-navy-950 px-6 py-4 md:hidden">
+      <a href="index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Home</a>
+      <a href="about.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">About ITE</a>
+      <a href="journey.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">My Journey</a>
+      <a href="subjects.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Subjects</a>
+      <a href="skills.html" class="block rounded-md px-3 py-2 text-sm font-medium text-accent-400">Skills</a>
+      <a href="projects.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Projects</a>
+      <a href="resources.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Resources</a>
+      <a href="advice.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Advice</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden bg-navy-950">
+
+  <!-- LEFT PHOTO -->
+  <div
+    class="absolute inset-y-0 left-0 w-1/2 bg-contain bg-center"
+    style="background-image: url('images/hk.jpg');">
+  </div>
+
+  <!-- RIGHT PHOTO -->
+  <div
+    class="absolute inset-y-0 right-0 w-1/2 bg-contain bg-center"
+    style="background-image: url('images/sk.jpg');">
+  </div>
+
+  <!-- DARK OVERLAY -->
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- TEXT -->
+  <div class="relative z-10 mx-auto flex min-h-[430px] max-w-6xl items-center px-6">
+
+    <div class="max-w-2xl">
+
+      <p class="font-heading text-3xl font-semibold text-accent-400">
+        SK & HK
+      </p>
+
+      <h1 class="mt-3 font-heading text-7xl font-semibold text-white sm:text-5xl" style="font-family: 'Times New Roman', Times, serif;">
+        Skills every ITE student needs
+      </h1>
+
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- ================= HARD + SOFT SKILLS ================= -->
+    <section class="bg-blue-250 py-16">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="grid gap-10 md:grid-cols-2">
+
+          <!-- Hard skills -->
+          <div class="rounded-3xl bg-gray-300 border border-black p-8">
+            <div class="group p-7 text-center transition sm:text-4xl md:text-5xl lg:text-6xl">🛠️</div>
+            <h2 class="mt-5 rounded-full bg-yellow-300 font-heading sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-navy-950 text-center" style="font-family: 'Times New Roman', Times, serif;">Hard skills</h2>
+            <p class="mt-2 sm:text-xl md:text-2xl lg:text-3xl text-slate-500">The technical, teachable abilities you build through coursework and practice.</p>
+
+            <!-- Tag-style pills instead of another card grid -->
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Programming language</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Data structures &amp; algorithms</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Web Development</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Database Management</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Computing Networking</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Operating Systems</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Software Development</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">OOP</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Cybersecurity Fundamentals</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Data Analysis</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Technical Documentation</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">problem-solving</span>
+            </div>
+          </div>
+
+          <!-- Soft skills -->
+          <div class="rounded-3xl border bg-gray-300 border-black p-8">
+            <div class="group p-7 text-center transition sm:text-4xl md:text-5xl lg:text-6xl">🤝</div>
+            <h2 class="mt-5 font-heading sm:text-2xl md:text-3xl lg:text-4xl rounded-full bg-green-300 font-semibold text-navy-950 text-center" style="font-family: 'Times New Roman', Times, serif;">Soft skills</h2>
+            <p class="mt-2 sm:text-xl md:text-2xl lg:text-3xl text-slate-500">The habits and people-skills that make the hard skills actually usable.</p>
+
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Problem solving</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Patience with debugging</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Time management</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Teamwork</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Communication</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Self-learning</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Handling feedback</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Staying curious</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Adaptability</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Self-Learning</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Creativity</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1.5 text-sm text-slate-700">Presentation Skills</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="max-w-xl">
+          <p class="mt-3 text-slate-600 italic"><b style="color: red;">Note:</b> All information just from what I understand. It's not cover everything about <b>ITE</b>. It's just some part of ITE that I took from my experience. </p> 
+        </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-navy-800 bg-navy-950">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-10 sm:flex-row">
+      <p class="text-sm text-white/40">© 2026 ITE Journey — built while learning HTML &amp; Tailwind.</p>
+      <p class="text-sm text-white/40">Made by [Sokkhim]</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

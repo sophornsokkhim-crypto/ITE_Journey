@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Journey — ITE Journey</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: "#050B18", 900: "#0B1730", 800: "#102244", 700: "#16305C", 600: "#1D3E75" },
+            accent: { 400: "#4FD8C4", 500: "#2BBFAA" },
+          },
+          fontFamily: {
+              heading: ['"Inter"', "sans-serif"],
+              body: ['"Inter"', "sans-serif"],
+            
+        }
+    
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-slate-50 font-body text-slate-800">
+
+  <!-- ================= NAVBAR ("My Journey" active) ================= -->
+  <header class="sticky top-0 z-50 border-b border-navy-800 bg-navy-950/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <!-- Logo / site name -->
+    <a href="index.html" class="flex items-center gap-2">
+      <span class="flex h-9 w-9 items-center justify-center rounded-md overflow-hidden">
+      <img src="images/ite_logo.png" alt="ITE Journey Logo" class="h-full w-full object-contain">
+      </span>
+
+      <span class="text-lg font-semibold text-white" style="font-family: 'Times New Roman', Times, serif;">ITE Journey</span>
+      </a>
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="index.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Home</a>
+        <a href="about.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">About ITE </a>
+        <a href="journey.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">My Journey</a>
+        <a href="subjects.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Subjects</a>
+        <a href="skills.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Skills</a>
+        <a href="projects.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Projects</a>
+        <a href="resources.html"class="nav-link text-sm font-medium text-white/70 transition-colors hover:text-[#ecf805]">Resources</a>
+       
+      </div>
+      <a href="advice.html" class="hidden rounded-md bg-accent-500 px-4 py-2 text-sm font-semibold text-navy-950 transition hover:bg-accent-400 md:inline-block">Advice</a>
+      <button id="menu-btn" class="text-white md:hidden" aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden space-y-1 border-t border-navy-800 bg-navy-950 px-6 py-4 md:hidden">
+      <a href="index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Home</a>
+      <a href="about.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">About ITE</a>
+      <a href="journey.html" class="block rounded-md px-3 py-2 text-sm font-medium text-accent-400">My Journey</a>
+      <a href="subjects.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Subjects</a>
+      <a href="skills.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Skills</a>
+      <a href="projects.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Projects</a>
+      <a href="resources.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Resources</a>
+      <a href="advice.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white/80 hover:bg-navy-800">Advice</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= MY JOURNEY HERO ================= -->
+<section class="relative overflow-hidden bg-navy-950">
+
+  <!-- LEFT PHOTO -->
+  <div
+    class="absolute inset-y-0 left-0 w-full md:w-1/2 bg-cover bg-center"
+    style="background-image: url('images/me2.jpg');">
+  </div>
+
+  <!-- RIGHT PHOTO (Hidden on mobile to prevent overlap, visible on desktop) -->
+  <div
+    class="hidden md:block absolute inset-y-0 right-0 w-1/2 bg-cover bg-center"
+    style="background-image: url('images/me.jpg');">
+  </div>
+
+
+  <!-- DARK OVERLAY -->
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- TEXT -->
+  <div class="relative z-10 mx-auto flex min-h-[430px] max-w-6xl items-center px-6">
+
+    <div class="max-w-2xl">
+
+      <p class="font-heading text-sm font-semibold text-accent-400">
+        Semester by semester
+      </p>
+
+      <h1 class="mt-3 font-heading text-5xl font-semibold text-white sm:text-5xl" style="font-family: 'Times New Roman', Times, serif;">
+        My Journey
+      </h1>
+
+      <p class="mt-4 leading-relaxed text-white/80">
+        <b style="color: red;">Note: </b>these curriculum are not the same for every year next generations
+        maybe change a little bit base on how fast technology grow, but actually we
+        will study all these courses.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+  
+ 
+
+    <!-- ================= TIMELINE ================= -->
+    <section class="bg-gray-200 py-16">
+      <div class="mx-auto max-w-4xl px-6">
+
+        <!--
+          TIMELINE STRUCTURE:
+          - The outer div is "relative" so we can position the vertical
+            line absolutely inside it.
+          - The line itself is a 2px-wide div with class "timeline-line"
+            (defined in style.css), stretched full height.
+          - Each semester is one "relative pl-14" block: the dot is
+            positioned absolutely on the line, the content sits to its right.
+        -->
+        <div class="relative">
+          <div class="timeline-line absolute left-[9px] top-2 bottom-2 w-0.5"></div>
+
+          <!-- ===== Year 1, Semester 1 ===== -->
+          <div class="relative mb-14 pl-14">
+            <span class="absolute left-0 top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-400 ring-4 ring-black"></span>
+            <p class="font-heading text-sm font-semibold text-blue-600">Year 1 · Semester 1</p>
+            <h2 class="mt-1 font-heading text-xl font-semibold text-yellow-500">Foundations</h2>
+            <ul class="mt-4 grid gap-x-8 gap-y-2 text-sm text-slate-600 sm:grid-cols-2">
+              <li>Mathematics I</li>
+              <li>Computer Fundamentals</li>
+              <li>Critical Thinking &amp; Personal Development</li>
+              <li>Academic Skills</li>
+              <li>English</li>
+              <li>Physics</li>
+              <li>Civilization &amp; History</li>
+            </ul>
+          </div>
+
+          <!-- ===== Year 1, Semester 2 ===== -->
+          <div class="relative mb-14 pl-14">
+            <span class="absolute left-0 top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 ring-4 ring-black"></span>
+            <p class="font-heading text-sm font-semibold text-blue-600">Year 1 · Semester 2</p>
+            <h2 class="mt-1 font-heading text-xl font-semibold text-green-700">Start practicing the code</h2>
+            <ul class="mt-4 grid gap-x-8 gap-y-2 text-sm text-slate-600 sm:grid-cols-2">
+              <li>Basic Programming Language</li>
+              <li>Introduction to Electrical &amp; Electronic Engineering</li>
+              <li>Mathematics II</li>
+              <li>Philosophy &amp; Sociology</li>
+              <li>Technical Drawing</li>
+              <li>Introduction to Statistics</li>
+              <li>English</li>
+            </ul>
+          </div>
+
+          <!-- ===== Year 2, Semester 1 ===== -->
+          <div class="relative mb-14 pl-14">
+            <span class="absolute left-0 top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-700 ring-4 ring-black"></span>
+            <p class="font-heading text-sm font-semibold text-blue-600">Year 2 · Semester 1</p>
+            <h2 class="mt-1 font-heading text-xl font-semibold text-blue-800">Build Website or System</h2>
+            <ul class="mt-4 grid gap-x-8 gap-y-2 text-sm text-slate-600 sm:grid-cols-2">
+              <li>Advanced Programming Language (Java)</li>
+              <li>Probability &amp; Statistics</li>
+              <li>Data Structures &amp; Algorithms</li>
+              <li>English</li>
+              <li>Database I</li>
+              <li>Data Communications I</li>
+              <li>Discrete Mathematics</li>
+              <li>Project Practicum</li>
+            </ul>
+          </div>
+
+          <!-- ===== Year 2, Semester 2 (current / most recent) ===== -->
+          <div class="relative pl-14">
+            <span class="absolute left-0 top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-800 ring-4 ring-black"></span>
+            <p class="font-heading text-sm font-semibold text-blue-600">Year 2 · Semester 2</p>
+            <h2 class="mt-1 font-heading text-xl font-semibold text-red-500">Going Deeper</h2>
+            <ul class="mt-4 grid gap-x-8 gap-y-2 text-sm text-slate-600 sm:grid-cols-2">
+              <li>Advanced Programming Language II</li>
+              <li>Object-Oriented Analysis &amp; Design</li>
+              <li>English</li>
+              <li>Data Communications II</li>
+              <li>Database II</li>
+              <li>Data Structures &amp; Algorithms II</li>
+              <!-- Double-check this against your syllabus if "WCT" stands for
+                   something more specific, e.g. "Web Client Technologies" -->
+              <li>WCT</li>
+              <li>Project Practicum</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="max-w-xl">
+          <p class="mt-3 text-slate-600 italic"><b style="color: red;">Note:</b> All information just from what I understand. It's not cover everything about <b>ITE</b>. It's just some part of ITE that I took from my experience. </p> 
+        </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-navy-800 bg-navy-950">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-10 sm:flex-row">
+      <p class="text-sm text-white/40">© 2026 ITE Journey — built while learning HTML &amp; Tailwind.</p>
+      <p class="text-sm text-white/40">Made by [Sokkhim]</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
